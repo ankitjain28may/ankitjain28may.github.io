@@ -60,7 +60,7 @@ else
             <a class="btn-floating btn-large <?php echo $_SESSION['col'];  ?>">
                 <i class="large material-icons">mode_edit</i>
             </a>
-        <form method="post" action="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+        <form method="post" action="index.php">
             <ul>
             <li><button class="btn-floating btn-large green waves-effect waves-light" type="submit" name="col" value="green">
                 <i class="material-icons right">surround_sound</i>
