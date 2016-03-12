@@ -30,9 +30,9 @@ else
 
 
 
-	<div class="navbar-fixed">
+    <div class="navbar-fixed">
         <nav class="<?php echo $_SESSION['col']; ?> darken-8" role="navigation">
-	        <div class="nav-wrapper container">
+            <div class="nav-wrapper container">
                 <a href="index.html" class="brand-logo">&nbsp;&nbsp;&nbsp;&nbsp;My Portfolio</a> 
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -41,7 +41,7 @@ else
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#project">Project</a></li>
                     <li><a href="#footer">Contact</a></li>   
-	           </ul>
+               </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Resume</a></li>
@@ -49,18 +49,18 @@ else
                     <li><a href="#project">Project</a></li>
                     <li><a href="#footer">Contact</a></li>
                 </ul>
-	       </div>
-	   </nav>
+           </div>
+       </nav>
     </div>
         
-	    <div class="container">
+        <div class="container">
 
             
         <div class="fixed-action-btn vertical" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large red">
+            <a class="btn-floating btn-large <?php echo $_SESSION['col'];  ?>">
                 <i class="large material-icons">mode_edit</i>
             </a>
-        <form method="post" action="index.php">
+        <form method="post" action="<?php echo $_SERVER['HTTP_REFERER']; ?>">
             <ul>
             <li><button class="btn-floating btn-large green waves-effect waves-light" type="submit" name="col" value="green">
                 <i class="material-icons right">surround_sound</i>
@@ -77,9 +77,9 @@ else
         
 
             <br>
-	        <h2 class="content-item center" id="about">About</h2>
+            <h2 class="content-item center" id="about">About</h2>
 
-	        <div class="row">
+            <div class="row">
                 <div class="col s12 m12">
                     <div class="card white z-depth-0">
                         <div class="card-content white-text">
@@ -401,7 +401,7 @@ else
 
 
 
-	<footer class="page-footer <?php echo $_SESSION['col']; ?> lighten-1" id="footer">
+    <footer class="page-footer <?php echo $_SESSION['col']; ?> lighten-1" id="footer">
         <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -426,11 +426,11 @@ else
             </div>
           </div>
     </footer>
-	
+    
 
-	
-	
-	
+    
+    
+    
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
