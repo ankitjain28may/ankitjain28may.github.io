@@ -1,3 +1,17 @@
+<?php 
+
+if(isset($_POST['col']))
+{
+    $_SESSION['col']=$_POST['col'];
+}
+else
+{
+    $_SESSION['col']="green";
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,8 +26,12 @@
     </head>
 
     <body>
+
+
+
+
 	<div class="navbar-fixed">
-        <nav class="green darken-8" role="navigation">
+        <nav class="<?php echo $_SESSION['col']; ?> darken-8" role="navigation">
 	        <div class="nav-wrapper container">
                 <a href="index.html" class="brand-logo">&nbsp;&nbsp;&nbsp;&nbsp;My Portfolio</a> 
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -36,6 +54,28 @@
     </div>
         
 	    <div class="container">
+
+            
+        <div class="fixed-action-btn vertical" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+        <form method="post" action="index.php">
+            <ul>
+            <li><button class="btn-floating btn-large green waves-effect waves-light" type="submit" name="col" value="green">
+                <i class="material-icons right">surround_sound</i>
+            </button></li>
+            <li><button class="btn-floating btn-large blue waves-effect waves-light" type="submit" name="col" value="blue">
+                <i class="material-icons right">surround_sound</i>
+            </button></li>
+            <li><button class="btn-floating btn-large red waves-effect waves-light" type="submit" name="col" value="red">
+                <i class="material-icons right">surround_sound</i>
+            </button></li>
+            </ul>
+        </form>
+        </div>
+        
+
             <br>
 	        <h2 class="content-item center" id="about">About</h2>
 
@@ -51,10 +91,10 @@
                                     </div>
                                 </div>
                                 <div class="col s12 m10 offset-m0">
-                                    <h4 style="color:green">Ankit Jain</h4>
+                                    <h4 style="color:<?php echo $_SESSION['col']; ?>">Ankit Jain</h4>
                                     
-                                    <p style="color:green">Hi! Presently I'm pursuing Computer Science and Engineering at JSS Academy Of Technical Education in Noida. Basically i am a tech-enthusiast and i love to solve algorithm problems. Apart from coding i used to play Badminton and Chess, Enjoying Parties with friends, listening music and Drawing as well.</p><br>
-                                    <p style="color:green">I am exploring my passion in the field of programming and i want to envolve myself in some projects so that i can improve my skills more.</p><br>
+                                    <p style="color:<?php echo $_SESSION['col']; ?>">Hi! Presently I'm pursuing Computer Science and Engineering at JSS Academy Of Technical Education in Noida. Basically i am a tech-enthusiast and i love to solve algorithm problems. Apart from coding i used to play Badminton and Chess, Enjoying Parties with friends, listening music and Drawing as well.</p><br>
+                                    <p style="color:<?php echo $_SESSION['col']; ?>">I am exploring my passion in the field of programming and i want to envolve myself in some projects so that i can improve my skills more.</p><br>
                                     <p style="color:black">Birth Date: 28 May 1996</p>
                                 </div>
                             </div>
@@ -62,7 +102,7 @@
                         <div class="card-action">
                             <div class="row">
                                 <div class="col s12 m7 offset-m5">
-                                    <a href="https://www.linkedin.com/profile/pdf?id=AAEAABlQlhEBD_TTgCJzn5pzVKbcs7FlYm34uM8&locale=&authType=&authToken=&pdfFileName=AnkitJain&disablePdfCompression=true&trk=pdf_pro_full" style="color:white" ><div class="btn green lighten-1 btn-large" >Download CV</div></a>
+                                    <a href="https://www.linkedin.com/profile/pdf?id=AAEAABlQlhEBD_TTgCJzn5pzVKbcs7FlYm34uM8&locale=&authType=&authToken=&pdfFileName=AnkitJain&disablePdfCompression=true&trk=pdf_pro_full" style="color:white" ><div class="btn <?php echo $_SESSION['col']; ?> lighten-1 btn-large" >Download CV</div></a>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +123,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                              <div class="col s12 m12 l3">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>2015-2019</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>2015-2019</button>
                             </div>
                             <div class="col s12 m12 l9 offset-l0">
                                 <div class="card-content black-text">
@@ -102,7 +142,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                              <div class="col s12 m12 l6">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>2013-2015</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>2013-2015</button>
                             </div>
                         </div>
                         <div class="row">
@@ -120,7 +160,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                              <div class="col s12 m12 l6">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>2001-2013</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>2001-2013</button>
                             </div>
                         </div>
                         <div class="row">
@@ -144,7 +184,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                             <div class="col s12 m7">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>Jan'16-Present</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>Jan'16-Present</button>
                             </div>
                         </div>
                         <div class="row">
@@ -162,7 +202,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                             <div class="col s12 m7">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>Nov'16-Present</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>Nov'16-Present</button>
                             </div>
                         </div>
                         <div class="row">
@@ -182,7 +222,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                             <div class="col s12 m7">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>Sep'15-Present</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>Sep'15-Present</button>
                             </div>
                         </div>
                         <div class="row">
@@ -200,7 +240,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                             <div class="col s12 m7">
-                                <button class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">code</i>Sep'15-Present</button>
+                                <button class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">code</i>Sep'15-Present</button>
                             </div>
                         </div>
                         <div class="row">
@@ -225,10 +265,10 @@
                         <div class="card-image waves-effect">
                             <img class="activator" src="c++.png" style="width:100%; height:100%">
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">C++</p>
                         </div>
-                        <div class="card-reveal green white-text">
+                        <div class="card-reveal <?php echo $_SESSION['col']; ?> white-text">
                             <span class="card-title "><i class="material-icons right">close</i></span><br>
                             <h3 style="font-family: 'Open Sans', sans-serif;">70%</h3>
                             <h5 class="center">C++</h5>
@@ -240,7 +280,7 @@
                         <div class="card-image waves-effect">
                             <img class="activator" src="python.jpg" style="width:100%; height:100%">
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">Python</p>
                         </div>
                         <div class="card-reveal yellow white-text">
@@ -256,7 +296,7 @@
                             <img class="activator" src="html.png" style="width:100%; height:100%">
                             <br>
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">HTML</p>
                         </div>
                         <div class="card-reveal red white-text">
@@ -271,7 +311,7 @@
                         <div class="card-image waves-effect">
                             <img class="activator " src="csss.jpg" style="border-radius:50%; padding:5%;width:100%; height:100%">
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">CSS</p>
                         </div>
                         <div class="card-reveal orange white-text">
@@ -286,7 +326,7 @@
                         <div class="card-image waves-effect">
                             <img class="activator" src="Java.png" style="width:100%; height:100%">
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">Java</p>
                         </div>
                         <div class="card-reveal blue white-text">
@@ -301,7 +341,7 @@
                         <div class="card-image waves-effect">
                              <img class="activator" src="c.png" style="width:100%; height:100%">
                         </div>
-                        <div class="card-content green white-text">
+                        <div class="card-content <?php echo $_SESSION['col']; ?> white-text">
                             <p class="center">C</p>
                         </div>
                         <div class="card-reveal teal white-text">
@@ -321,7 +361,7 @@
                     <div class="card white z-depth-1"> 
                         <div class="row">
                             <div class="col s12 m12">
-                                <div class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">turned_in_not</i>My Portfolio</div>
+                                <div class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">turned_in_not</i>My Portfolio</div>
                             </div>
                         </div>
                         <div class="row">
@@ -339,7 +379,7 @@
                     <div class="card white z-depth-1">
                         <div class="row">
                             <div class="col s12">
-                                <div class="btn waves-effect waves-light green lighten-1"><i class="material-icons left">turned_in_not</i>Hackathon 2k15</div>
+                                <div class="btn waves-effect waves-light <?php echo $_SESSION['col']; ?> lighten-1"><i class="material-icons left">turned_in_not</i>Hackathon 2k15</div>
                             </div>
                         </div>
                         <div class="row">
@@ -361,7 +401,7 @@
 
 
 
-	<footer class="page-footer green lighten-1" id="footer">
+	<footer class="page-footer <?php echo $_SESSION['col']; ?> lighten-1" id="footer">
         <div class="container">
             <div class="row">
               <div class="col l6 s12">
