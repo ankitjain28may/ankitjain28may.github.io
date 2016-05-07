@@ -1,0 +1,222 @@
+	
+			body{
+				position: absolute;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgb(244, 239, 239);
+				font-family: 'Open Sans',sans-serif;
+			}
+			.brand{
+				font-size: 18px;
+				color: white;
+				text-decoration: none;
+				padding: 15px 20px;
+				float: left;
+				text-transform: capitalize;
+				letter-spacing: 1px;
+				word-spacing: 3px;
+			}
+			.brand:hover {
+				background: rgba(0,0,0,0.3);
+			}
+			.left{
+				float: right;
+				margin: 0;
+				font-size: 18px;
+				text-transform: capitalize;
+				letter-spacing: 1px;
+				word-spacing: 3px;
+			}
+			li:hover {
+				background: rgba(0,0,0,0.3);
+			}
+			ul>li {
+				display: inline-block;
+				list-style: none;
+				padding: 15px 10px;
+				
+			}
+			li>a {
+				text-decoration: none;
+				color: white;
+			}
+			.cover{
+				height: 350px;
+				width: 80%;
+				position: relative;
+				top: 50px;
+				text-align: center;
+				background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../cover.jpg");
+				margin-left: 10%;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+
+			}
+			.outer
+			{
+				position: absolute;
+				width: 80%;
+				height: 100%;
+				margin: 1% 10% 2% 10%;
+				z-index: 10;
+				
+			}
+			.boxx{
+				position: relative;
+				background-color: white;
+				width: 90%;
+				border-radius: 2px;
+             	box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.3);
+				padding: 5%;
+				text-align: center;
+				border-bottom: 5px solid #2196F3;
+				float: left;
+				z-index: 10;
+				margin-bottom: 2%;
+
+			}
+			#boxx
+			{
+				width: 36%;
+				margin: 0 2% 2% 2%;
+				display: inline-block;
+				float: left;
+			}
+			.head {
+				position: fixed;
+				/*border-top: 5px solid #212121;*/
+				height: 50px;
+				width: 100%;
+				background: #3F51B5;
+				box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);
+				box-sizing:border-box;
+				z-index: 12;
+			}
+			
+			
+			.pic
+			{
+				width: 30%;
+				float: left;
+			}
+			.pic > img
+			{
+				width: 50%;
+				height: auto;
+				border: 2px solid #212121;
+			}
+			.brief {
+				width: 70%;
+				float: right;
+				text-align: left;
+			}
+			.icon
+			{
+			text-decoration: none;
+			color: black;
+			border-radius: 3%;
+			padding: 0.4%;
+			}
+			#icon 
+			{
+				width: 10%;
+				float: right;
+			}
+			.icon:hover
+			{
+				background-color: #eeeeee;
+			}
+			.position
+			{
+			text-decoration: none;
+			color: black;
+			border-radius: 3%;
+			padding: 4%;
+					
+			}
+			#position 
+			{
+				width: 20%;
+				float: right;
+
+			}
+			.position:hover
+			{
+				background-color: #eeeeee;
+			}
+			.summary{
+				width: 80%;
+				text-align: left;
+				float: left;
+				overflow: hidden;
+			}
+
+			
+			.button
+			{
+				font-size: 15px;
+				width: 120px;	
+				height: 30px;
+				border-radius: 2px;
+             	box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);
+				margin: 20px;
+			}
+			#skill_add {
+				width: 40%;
+				float: right;
+			}
+			.skills
+			{
+				width: 60%;
+			}
+			.edit
+			{
+				width: 100%;
+				display: none;
+			}
+			.edit>input {
+				height: 25px;
+				border-radius: 5%;
+			}
+			.edit>textarea {
+				border-radius: 1%;
+				width:100%; 
+				height:100px;
+			}
+			.fa {
+				color: #4A3E3E !important;
+			}
+			.fa:hover {
+				color: #2196F3 !important;
+			}
+
+@media (max-width:1024px) {
+	.header
+	{
+		height: 280px;
+	}
+}
+@media (max-width: 700px) {
+	.header {
+		height: 180px;
+
+	}
+	.cover{
+		top: 35px;
+	}
+	.brand {
+		font-size: 12px;
+	}
+	.left {
+		font-size: 12px;
+	}
+	.head {
+		height: 35px;
+	}
+	.status {
+		font-size: 90%;
+	}
+
+}
