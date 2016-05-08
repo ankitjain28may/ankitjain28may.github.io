@@ -265,7 +265,7 @@
 
 			#login {
 				width: 100%;
-				height: auto;
+				height: 680px;
 				
 			}
 
@@ -307,5 +307,9 @@
 	.status {
 		font-size: 90%;
 	}
+	#edit{
+		font-size: 10px;
+	}
+
 
 }
