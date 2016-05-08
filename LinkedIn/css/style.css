@@ -1,13 +1,21 @@
-	
+@font-face {
+	font-family: 'tele';
+	src: url('../assets/t.ttf');
+}	
+
+
+
+
+
 			body{
-				position: absolute;
+				font-family: 'tele';
+				position: relative;
 				padding: 0;
 				margin: 0;
 				width: 100%;
 				height: 100%;
 				background-color: rgb(244, 239, 239);
-				font-family: 'Open Sans',sans-serif;
-			}
+}
 			.brand{
 				font-size: 18px;
 				color: white;
@@ -61,36 +69,39 @@
 				height: 100%;
 				margin: 1% 10% 2% 10%;
 				z-index: 10;
-				
+				box-sizing:border-box;
 			}
 			.boxx{
 				position: relative;
 				background-color: white;
-				width: 90%;
+				width: 100%;
 				border-radius: 2px;
-             	box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.3);
+/*             	box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.3);*/
 				padding: 5%;
 				text-align: center;
-				border-bottom: 5px solid #2196F3;
+				border-bottom: 5px solid #2c3e50;
 				float: left;
 				z-index: 10;
 				margin-bottom: 2%;
+				box-sizing:border-box;
 
 			}
 			#boxx
 			{
-				width: 36%;
+				width: 46%;
 				margin: 0 2% 2% 2%;
 				display: inline-block;
 				float: left;
+				box-sizing:border-box;
 			}
 			.head {
+				font-family: 'tele';
 				position: fixed;
 				/*border-top: 5px solid #212121;*/
 				height: 50px;
 				width: 100%;
-				background: #3F51B5;
-				box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);
+				background: #2c3e50;
+/*				box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);*/
 				box-sizing:border-box;
 				z-index: 12;
 			}
@@ -117,7 +128,7 @@
 			text-decoration: none;
 			color: black;
 			border-radius: 3%;
-			padding: 0.4%;
+			padding: 0.6%;
 			}
 			#icon 
 			{
@@ -160,7 +171,16 @@
 				width: 120px;	
 				height: 30px;
 				border-radius: 2px;
-             	box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);
+/*             	box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);*/
+				margin: 20px;
+			}
+
+			.btn {
+				font-size: 12px;
+				width: 80px;	
+				height: 20px;
+				border-radius: 2px;
+/*             	box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.5);*/
 				margin: 20px;
 			}
 			#skill_add {
@@ -173,24 +193,87 @@
 			}
 			.edit
 			{
+				overflow: hidden;
 				width: 100%;
 				display: none;
+				text-align: left;
+				box-sizing:border-box;
 			}
 			.edit>input {
+				
 				height: 25px;
 				border-radius: 5%;
 			}
 			.edit>textarea {
 				border-radius: 1%;
-				width:100%; 
+				width:98%; 
 				height:100px;
 			}
 			.fa {
 				color: #4A3E3E !important;
 			}
 			.fa:hover {
-				color: #2196F3 !important;
+				color: #2c3e50 !important;
 			}
+
+
+			.modal {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 12; /* Sit on top */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			}
+
+			/* Modal Content/Box */
+			.modal-content {
+			    background-color: #fefefe;
+			    margin: 15% auto; /* 15% from the top and centered */
+			    padding: 20px;
+			    border: 1px solid #888;
+			    width: 40%; /* Could be more or less, depending on screen size */
+			    border-bottom: 5px solid #2c3e50;
+			    border-radius: 1%;
+
+			}
+
+			/* The Close Button */
+			.close {
+			    color: #aaa;
+			    float: right;
+			    font-size: 28px;
+			    font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+			    color: black;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+			#edit>input {
+				
+				height: 25px;
+				border-radius: 5%;
+			}
+
+
+
+			/*.footer {
+				position: 
+				left: 0;
+				height: 50px;
+				width: 100%;
+				background: #2c3e50;
+				font-family: 'tele';
+				
+			}*/
 
 @media (max-width:1024px) {
 	.header

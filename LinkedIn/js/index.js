@@ -36,7 +36,7 @@ function edit(name)
 
 	function submitt(subm)
 	{
-				var k="edit"+subm+subm;
+				var k="edit_"+subm;
 				var p="edit"+subm;
 				console.log(k);
 				var value=document.getElementById(k).value;
@@ -54,9 +54,23 @@ function edit(name)
 	
 				num="summary"+num;
 				var ad=document.getElementById(num).innerHTML;
-				ad='<div class="summary" id='+num+'>'+ad+'</div>';
+				ad='<div class="edit" id='+num+'>'+ad+'</div>';
 				console.log(ad);
 				document.getElementById(num).insertAdjacentHTML('beforebegin',ad);
 		
 	}
+	function editt()
+	{
+		document.createElement
+		
+	}
 
+	function modal()
+	{
+		document.getElementById("myModal").style="display:block";
+	}
+
+	function closee()
+	{
+		document.getElementById("myModal").style="display:none";
+	}
