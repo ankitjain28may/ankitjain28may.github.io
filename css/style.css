@@ -1,12 +1,16 @@
-html,body,div,ul,li,a {
+html, body, div, ul, li, a {
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box;
 }
 body {
 	font-family: 'Helvetica Neue', sans-serif;
+	background-image: url("../images/bg.jpg") ;
+	width: 100%;
+	height: 100%;
+	position: fixed;
 }
-h1,h2,h3,h4 {
+h1, h2, h3, h4 {
 	color: #3B5998;
 }
 ul {
@@ -27,12 +31,6 @@ a {
 }
 #Contact {
 	display: none;
-}
-body {
-	background-image: url("../images/bg.jpg") ;
-	width: 100%;
-	height: 100%;
-	position: fixed;
 }
 .center {
 	background-image: url("../images/bg.jpg") ;
@@ -113,8 +111,10 @@ body {
 }
 
 .text-a {
+	width: 60%;
 	padding: 5px;
 	display: inline-block;
+	word-wrap: break-word;
 
 }
 
@@ -207,12 +207,12 @@ body {
 }
 
 .contact {
-
 	width: 80%;
-	margin-left: 10%;
-	margin-top: 10%;
+	margin: 0;
+	margin-left: 30px;
+	margin-top: 30px;
 	font-size: 15px;
-	line-height: 5%;
+	line-height: 1;
 }
 
 .line-c {
