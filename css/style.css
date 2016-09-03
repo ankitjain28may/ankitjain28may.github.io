@@ -240,6 +240,13 @@ a {
   	color: white;
 }
 
+#white {
+	color: white;
+}
+.clear-both {
+	clear: both;
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;
